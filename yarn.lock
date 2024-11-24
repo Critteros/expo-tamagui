@@ -3505,7 +3505,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/stacks@npm:1.117.1":
+"@tamagui/stacks@npm:1.117.1, @tamagui/stacks@npm:^1.117.1":
   version: 1.117.1
   resolution: "@tamagui/stacks@npm:1.117.1"
   dependencies:
@@ -3580,7 +3580,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/text@npm:1.117.1":
+"@tamagui/text@npm:1.117.1, @tamagui/text@npm:^1.117.1":
   version: 1.117.1
   resolution: "@tamagui/text@npm:1.117.1"
   dependencies:
@@ -5051,6 +5051,8 @@ __metadata:
     "@react-navigation/bottom-tabs": "npm:^7.0.0"
     "@react-navigation/native": "npm:^7.0.0"
     "@tamagui/config": "npm:^1.117.1"
+    "@tamagui/stacks": "npm:^1.117.1"
+    "@tamagui/text": "npm:^1.117.1"
     "@types/jest": "npm:^29.5.12"
     "@types/react": "npm:~18.3.12"
     "@types/react-test-renderer": "npm:^18.3.0"
