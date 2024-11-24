@@ -1,25 +1,20 @@
-import 'react-native-reanimated';
-
 import { useEffect } from 'react';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import * as SplashScreen from 'expo-splash-screen';
+import { useColorScheme } from 'react-native';
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { createTamagui, TamaguiProvider, View } from 'tamagui';
-import defaultConfig from '@tamagui/config/v3';
+import { SplashScreen, Stack } from 'expo-router';
+import { TamaguiProvider } from 'tamagui';
+import { useFonts } from 'expo-font';
 
-import { useColorScheme } from '@/hooks/useColorScheme';
+import { tamaguiConfig } from '@/tamagui.config';
 
-// Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
-
-const config = createTamagui(defaultConfig);
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
+
   const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+    Inter: require('@tamagui/font-inter/otf/Inter-Medium.otf'),
+    InterBold: require('@tamagui/font-inter/otf/Inter-Bold.otf'),
   });
 
   useEffect(() => {
@@ -28,18 +23,11 @@ export default function RootLayout() {
     }
   }, [loaded]);
 
-  if (!loaded) {
-    return null;
-  }
-
   return (
-    <TamaguiProvider config={config}>
+    // add this
+    <TamaguiProvider config={tamaguiConfig} defaultTheme={colorScheme!}>
       <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-        <Stack>
-          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen name="+not-found" />
-        </Stack>
-        <StatusBar style="auto" />
+        <Stack screenOptions={{ headerShown: false }} />
       </ThemeProvider>
     </TamaguiProvider>
   );
