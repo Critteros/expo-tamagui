@@ -5647,6 +5647,7 @@ __metadata:
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     react-native: "npm:0.76.3"
+    react-native-executorch: "npm:^0.1.1"
     react-native-gesture-handler: "npm:~2.20.2"
     react-native-reanimated: "npm:~3.16.1"
     react-native-safe-area-context: "npm:^4.14.0"
@@ -10729,6 +10730,16 @@ __metadata:
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: 10c0/33977da7a5f1a287936a0c85639fec6ca74f4f15ef1e59a6bc20338fc73dc69555381e211f7a3529b8150a1f71e4225525b41b60b52965bda53ce7d47377ada1
+  languageName: node
+  linkType: hard
+
+"react-native-executorch@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "react-native-executorch@npm:0.1.1"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 10c0/adf6bd5c528f2fad687af63d2e6e62775abb60bb04cb86ff452ce8898b3661314d9ceaf1c0e0222a00d1b6e1312d65019ec09c5457f88760eef49e00cb18e0b3
   languageName: node
   linkType: hard
 
